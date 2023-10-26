@@ -5,7 +5,8 @@ module Jekyll
       
       # Logic from jekyll-favicon
       include Convertible
-      include Mutable
+      include Jekyll::Favicon::StaticFile::Mutable
+      #include Mutable
 
       # Overriding the copy_file method to integrate both plugins
       def copy_file(*args)
